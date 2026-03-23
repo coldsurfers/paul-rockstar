@@ -19,6 +19,12 @@ const projects = [
     tags: ['TypeScript', 'Monorepo', 'Turborepo'],
     href: 'https://github.com/coldsurfers/surfers-common',
   },
+  {
+    name: 'github-watcher',
+    description: 'macOS menu bar app to watch GitHub PR activity in real time. Built with Tauri 2 + Rust + React.',
+    tags: ['Tauri', 'Rust', 'React', 'TypeScript', 'macOS'],
+    href: 'https://github.com/yungblud/github-watcher',
+  },
 ]
 
 export function Projects() {
