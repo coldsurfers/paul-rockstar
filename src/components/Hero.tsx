@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
-const links = [
+const externalLinks = [
   { label: 'GitHub', href: 'https://github.com/coldsurfers' },
   { label: 'COLDSURF', href: 'https://coldsurf.io' },
   { label: 'Email', href: 'mailto:imcoldsurf@gmail.com' },
@@ -33,8 +34,8 @@ export function Hero() {
           {' '}— a better ticketing ecosystem.
           React, React Native, TypeScript, and Node.js across the full stack.
         </p>
-        <div className="flex gap-6">
-          {links.map((link) => (
+        <div className="flex gap-6 flex-wrap">
+          {externalLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -45,6 +46,12 @@ export function Hero() {
               {link.label} ↗
             </a>
           ))}
+          <Link
+            to="/blog"
+            className="text-sm text-[#555] hover:text-[#f0f0f0] transition-colors"
+          >
+            Blog →
+          </Link>
         </div>
       </motion.div>
     </section>
