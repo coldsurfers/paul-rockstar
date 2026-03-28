@@ -7,6 +7,84 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20250329',
+    title: '존 윅에서 배우는 일 잘하는 법',
+    date: '2025.03.29',
+    excerpt: '완벽한 밸런스와 불굴의 장인정신. 존 윅이 독보적인 이유이자, 일 잘하는 사람의 조건.',
+  },
+  {
+    slug: '20230220',
+    title: 'Android 에뮬레이터에 Play Store 활성화하기',
+    date: '2023.02.20',
+    excerpt: 'AVD config.ini 파일 두 줄만 바꾸면 된다. PlayStore.enabled와 image.sysdir.1 수정법.',
+  },
+  {
+    slug: '20200120',
+    title: '이벤트 루프 — 자바스크립트가 비동기를 처리하는 방식',
+    date: '2020.01.20',
+    excerpt: '자바스크립트는 싱글 스레드다. 그런데 어떻게 비동기가 가능한가. Call Stack, Task Queue, 이벤트 루프의 작동 원리.',
+  },
+  {
+    slug: '20240101',
+    title: 'IntersectionObserver — 스크롤 감지의 올바른 방법',
+    date: '2024.01.01',
+    excerpt: 'scroll 이벤트와 getBoundingClientRect의 단점을 피하는 법. 무한 스크롤과 고정 사이드바 실전 예시.',
+  },
+  {
+    slug: '20240102',
+    title: 'Virtual DOM — 왜 필요한가',
+    date: '2024.01.02',
+    excerpt: '브라우저 DOM을 직접 건드리는 것은 생각보다 훨씬 비싸다. Virtual DOM과 Reconciliation의 작동 원리.',
+  },
+  {
+    slug: '20240113',
+    title: '의견 전달의 두 가지 방향',
+    date: '2024.01.13',
+    excerpt: '의견을 전달하는 방식은 결국 지배와 복종의 관계를 지향하느냐의 문제다. 열린 전달과 통보는 다르다.',
+  },
+  {
+    slug: '20240116',
+    title: '신뢰는 어디서 오는가',
+    date: '2024.01.16',
+    excerpt: '일을 잘하는 것과 신뢰는 다르다. 무의식적으로 나오는 행동들이 그 사람을 믿을 수 있는 존재로 만든다.',
+  },
+  {
+    slug: '20240119',
+    title: '그린필드 프로젝트에서 배운 것들',
+    date: '2024.01.19',
+    excerpt: '도메인에 따른 DB 스키마가 모든 것이다. React Native 앱을 처음부터 만들며 경험한 굵직한 것들.',
+  },
+  {
+    slug: '20240210',
+    title: '스타트업은 예술가 집단이다',
+    date: '2024.02.10',
+    excerpt: 'Radiohead와 Muse가 보여주는 두 갈래. 대중에게 다가갈 것인가, 불가능에 계속 도전할 것인가.',
+  },
+  {
+    slug: '20240901',
+    title: 'MySQL에서 위치 데이터를 다루는 법 — GeoHash로 최적화하기',
+    date: '2024.09.01',
+    excerpt: 'ST_Contains 대신 GeoHash prefix로. 서비스 관점에서 위치 데이터 쿼리를 단순하고 빠르게.',
+  },
+  {
+    slug: '20241112',
+    title: '나와 결을 같이 할 수 있는 회사를 알아보는 노하우',
+    date: '2024.11.12',
+    excerpt: '좋은 회사가 아니라 나와 결을 같이 할 수 있는 회사. 동류, 프로덕트 관점, 전환기를 보는 법.',
+  },
+  {
+    slug: '20241117',
+    title: '토스는 왜 상장하지 않을까',
+    date: '2024.11.17',
+    excerpt: '토스보다 작은 기업들이 상장을 준비하는 걸 보면서 든 의문. 상장 보류가 오히려 더 전략적인 선택일 수 있다.',
+  },
+  {
+    slug: '20250316',
+    title: 'React Native New Architecture — 브릿징의 진화',
+    date: '2025.03.16',
+    excerpt: '우리가 편하게 쓰던 View는 사실 네이티브 브릿징 컴포넌트다. JSI, Fabric, TurboModules까지.',
+  },
+  {
     slug: '20250615',
     title: '쿠키를 제대로 쓰고 있는가 — SameSite부터 RBAC까지',
     date: '2025.06.15',
