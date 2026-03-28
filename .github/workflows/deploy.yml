@@ -24,4 +24,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=paul-rockstar
+          command: pages deploy dist --project-name=paul-rockstar --commit-dirty=true --commit-message="${{ github.sha }}"
