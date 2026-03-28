@@ -5,7 +5,7 @@ export interface Post {
   excerpt: string
 }
 
-export const posts: Post[] = [
+const _posts: Post[] = [
   {
     slug: '20250615',
     title: '쿠키를 제대로 쓰고 있는가 — SameSite부터 RBAC까지',
@@ -73,3 +73,5 @@ export const posts: Post[] = [
     excerpt: '팩트 없이 말로만 이기려 드는 태도는 학교뿐 아니라 직장과 사회 곳곳에 만연하다.',
   },
 ]
+
+export const posts: Post[] = _posts.sort((a, b) => b.slug.localeCompare(a.slug))
