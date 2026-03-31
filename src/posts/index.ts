@@ -7,6 +7,12 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260331',
+    title: '팀 안에서 실제로 쓰기 시작한 RAG + Slack bot',
+    date: '2026.03.31',
+    excerpt: '거창한 AI 플랫폼보다 먼저 필요한 것. Slack 멘션 한 번으로 팀 문서를 근거로 답하는, 실제 운영 흐름 안의 RAG bot.',
+  },
+  {
     slug: '20250329',
     title: '존 윅에서 배우는 일 잘하는 법',
     date: '2025.03.29',
