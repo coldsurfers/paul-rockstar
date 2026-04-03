@@ -1,8 +1,18 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { usePageSeo } from '../hooks/usePageSeo'
 import { posts } from '../posts'
 
+const BLOG_SEO = {
+  title: 'Blog',
+  description:
+    'Paul Choi의 글 모음. 프론트엔드, 제품, 조직과 개발 문화에 대한 짧은 메모와 회고.',
+  path: '/blog',
+} as const
+
 export function BlogList() {
+  usePageSeo(BLOG_SEO)
+
   return (
     <main className="min-h-screen px-6 max-w-3xl mx-auto py-24">
       <motion.div

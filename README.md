@@ -12,9 +12,13 @@ Live at [paul-rockstar.coldsurf.io](https://paul-rockstar.coldsurf.io)
 
 ## Dev
 
+패키지 매니저는 **pnpm**만 사용합니다 (`npm` / `yarn`으로 설치하지 마세요). [Corepack](https://nodejs.org/api/corepack.html)을 켜 두면 `packageManager` 버전과 맞춰집니다.
+
 ```bash
+corepack enable
 pnpm install
 pnpm dev
+pnpm build
 ```
 
 ## Blog

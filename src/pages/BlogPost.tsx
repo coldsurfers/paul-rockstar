@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { usePageSeo } from '../hooks/usePageSeo'
 import { posts } from '../posts'
 
 const postModules = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
@@ -12,6 +13,12 @@ export function BlogPost() {
   const [content, setContent] = useState<string | null>(null)
 
   const post = posts.find((p) => p.slug === slug)
+
+  usePageSeo({
+    title: post?.title ?? 'Blog',
+    description: post?.excerpt ?? '',
+    path: `/blog/${slug ?? ''}`,
+  })
 
   useEffect(() => {
     if (!slug) return
