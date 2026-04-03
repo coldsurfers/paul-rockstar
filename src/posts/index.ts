@@ -7,6 +7,13 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260403',
+    title: '직장인으로서의 올바른 개발자',
+    date: '2026.04.03',
+    excerpt:
+      '조직이 서사와 책임으로 움직일 때 살아남는 태도. 라인에 묶이지 않고, 기록하고, 문제 중심으로 말하는 직장인 개발자의 기준.',
+  },
+  {
     slug: '20260331',
     title: '팀 안에서 실제로 쓰기 시작한 RAG + Slack bot',
     date: '2026.03.31',
