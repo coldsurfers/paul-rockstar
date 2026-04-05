@@ -14,6 +14,12 @@ const projects = [
     href: 'https://github.com/coldsurfers/ocean-road',
   },
   {
+    name: '@coldsurf/tickets',
+    description: 'CLI tool for querying KOPIS performing arts data. Search concerts, musicals, and more from your terminal.',
+    tags: ['CLI', 'TypeScript', 'KOPIS', 'Node.js'],
+    href: 'https://github.com/coldsurfers/kopis-cli',
+  },
+  {
     name: 'Surfers Common',
     description: 'Shared utilities and helpers across the COLDSURF monorepo.',
     tags: ['TypeScript', 'Monorepo', 'Turborepo'],
