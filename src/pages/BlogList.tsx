@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo } from 'react'
+import { Link, useNavigationType } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { usePageSeo } from '../hooks/usePageSeo'
 import { posts } from '../posts'
@@ -10,28 +11,46 @@ const BLOG_SEO = {
   path: '/blog',
 } as const
 
+let hasEverMounted = false
+
+function useListMotion() {
+  const skip = useNavigationType() === 'POP' && hasEverMounted
+
+  useEffect(() => {
+    hasEverMounted = true
+  }, [])
+
+  return useMemo(
+    () => ({
+      container: {
+        initial: skip ? false : ({ opacity: 0, y: 24 } as const),
+        animate: { opacity: 1, y: 0 } as const,
+        transition: { duration: 0.6, ease: 'easeOut' } as const,
+      },
+      item: (i: number) => ({
+        initial: skip ? false : ({ opacity: 0, y: 12 } as const),
+        animate: { opacity: 1, y: 0 } as const,
+        transition: { duration: 0.4, delay: skip ? 0 : i * 0.08 } as const,
+      }),
+    }),
+    [skip],
+  )
+}
+
 export function BlogList() {
   usePageSeo(BLOG_SEO)
+  const motion$ = useListMotion()
 
   return (
     <main className="min-h-screen px-6 max-w-3xl mx-auto py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
+      <motion.div {...motion$.container}>
         <Link to="/" className="text-xs text-[#555] hover:text-[#f0f0f0] transition-colors tracking-widest uppercase mb-12 inline-block">
           ← Paul Choi
         </Link>
         <p className="text-sm text-[#555] tracking-widest uppercase mb-10">Blog</p>
         <div className="flex flex-col border border-[#1f1f1f]">
           {posts.map((post, i) => (
-            <motion.div
-              key={post.slug}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-            >
+            <motion.div key={post.slug} {...motion$.item(i)}>
               <Link
                 to={`/blog/${post.slug}`}
                 className="group flex flex-col gap-2 p-6 bg-[#111] hover:bg-[#161616] transition-colors border-b border-[#1f1f1f] last:border-b-0"
