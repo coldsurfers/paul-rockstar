@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { Link, useNavigationType } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { usePageSeo } from '../hooks/usePageSeo'
-import { posts } from '../posts'
+import { posts, getSeriesPosts } from '../posts'
 
 const BLOG_SEO = {
   title: 'Blog',
@@ -62,7 +62,14 @@ export function BlogList() {
                   <span className="text-[#333] text-sm">→</span>
                 </div>
                 <p className="text-[#666] text-sm leading-relaxed">{post.excerpt}</p>
-                <span className="text-xs text-[#444]">{post.date}</span>
+                <span className="text-xs text-[#444]">
+                  {post.date}
+                  {post.series && (
+                    <span className="ml-1">
+                      · 시리즈: {post.series.title} {post.series.order}/{getSeriesPosts(post.series.id).length}
+                    </span>
+                  )}
+                </span>
               </Link>
             </motion.div>
           ))}

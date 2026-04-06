@@ -51,10 +51,10 @@
 
 ### Phase 1 체크리스트
 
-- [ ] `20260409.md` 도입부에 세 글 회수 문단 추가
-- [ ] `20260405.md` 하단에 종합 글 링크 추가
-- [ ] `20260406.md` 하단에 종합 글 링크 추가
-- [ ] `20260407.md` 하단에 종합 글 링크 추가
+- [x] `20260409.md` 도입부에 세 글 회수 문단 추가
+- [x] `20260405.md` 하단에 종합 글 링크 추가
+- [x] `20260406.md` 하단에 종합 글 링크 추가
+- [x] `20260407.md` 하단에 종합 글 링크 추가
 
 ---
 
@@ -128,9 +128,9 @@ export function getSeriesPosts(seriesId: string): Post[] {
 
 ### Phase 2 체크리스트
 
-- [ ] `Post` 인터페이스에 `series` 옵셔널 필드 추가
-- [ ] 4개 포스트에 `series` 데이터 적용
-- [ ] `getSeriesPosts` 유틸 함수 추가
+- [x] `Post` 인터페이스에 `series` 옵셔널 필드 추가
+- [x] 4개 포스트에 `series` 데이터 적용
+- [x] `getSeriesPosts` 유틸 함수 추가
 
 ---
 
@@ -220,9 +220,9 @@ export function SeriesNav({ currentSlug, seriesId }: SeriesNavProps) {
 
 ### Phase 3 체크리스트
 
-- [ ] `src/components/SeriesNav.tsx` 신규 생성
-- [ ] `src/pages/BlogPost.tsx`에 `SeriesNav` 조건부 렌더링 추가
-- [ ] `src/pages/BlogList.tsx`에 시리즈 배지 표시 추가
+- [x] `src/components/SeriesNav.tsx` 신규 생성
+- [x] `src/pages/BlogPost.tsx`에 `SeriesNav` 조건부 렌더링 추가
+- [x] `src/pages/BlogList.tsx`에 시리즈 배지 표시 추가
 
 ---
 

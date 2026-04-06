@@ -3,6 +3,12 @@ export interface Post {
   title: string
   date: string
   excerpt: string
+  series?: {
+    id: string
+    title: string
+    order: number
+    isSummary?: boolean
+  }
 }
 
 const _posts: Post[] = [
@@ -12,6 +18,7 @@ const _posts: Post[] = [
     date: '2026.04.09',
     excerpt:
       '비전은 있었다. 방향도 있었다. 그런데 아무것도 만들어지지 않았다. 문제는 사람이 아니라 구조였다.',
+    series: { id: 'org-execution', title: '실행되지 않는 조직', order: 4, isSummary: true },
   },
   {
     slug: '20260408',
@@ -26,6 +33,7 @@ const _posts: Post[] = [
     date: '2026.04.07',
     excerpt:
       '대화를 늘리면 협업이 나아질 거라 생각하기 쉽다. 하지만 구조가 없는 대화는 혼란만 키운다.',
+    series: { id: 'org-execution', title: '실행되지 않는 조직', order: 3 },
   },
   {
     slug: '20260406',
@@ -33,6 +41,7 @@ const _posts: Post[] = [
     date: '2026.04.06',
     excerpt:
       '결정을 빠르게 내리는 조직은 드물다. 하지만 결정이 느려도 실행이 멈추지 않는 조직은 만들 수 있다.',
+    series: { id: 'org-execution', title: '실행되지 않는 조직', order: 2 },
   },
   {
     slug: '20260405',
@@ -40,6 +49,7 @@ const _posts: Post[] = [
     date: '2026.04.05',
     excerpt:
       '기획서가 없으면 개발도 없다고 생각하기 쉽다. 하지만 제품이 멈추는 건 기획서 때문이 아니라, 아무도 다음 한 발을 안 내딛기 때문이다.',
+    series: { id: 'org-execution', title: '실행되지 않는 조직', order: 1 },
   },
   {
     slug: '20260404',
@@ -208,3 +218,9 @@ const _posts: Post[] = [
 ]
 
 export const posts: Post[] = _posts.sort((a, b) => b.slug.localeCompare(a.slug))
+
+export function getSeriesPosts(seriesId: string): Post[] {
+  return posts
+    .filter((p) => p.series?.id === seriesId)
+    .sort((a, b) => (a.series?.order ?? 0) - (b.series?.order ?? 0))
+}

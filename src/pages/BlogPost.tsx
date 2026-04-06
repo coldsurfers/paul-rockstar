@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { usePageSeo } from '../hooks/usePageSeo'
 import { posts } from '../posts'
+import { SeriesNav } from '../components/SeriesNav'
 
 const postModules = import.meta.glob('../posts/*.md', { query: '?raw', import: 'default' })
 
@@ -108,6 +109,9 @@ export function BlogPost() {
           </ReactMarkdown>
         ) : (
           <p className="text-[#555] text-sm">Loading...</p>
+        )}
+        {post.series && slug && (
+          <SeriesNav currentSlug={slug} seriesId={post.series.id} />
         )}
       </motion.div>
     </main>
