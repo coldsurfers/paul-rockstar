@@ -13,6 +13,13 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260411',
+    title: '디자인 시안을 읽는 개발자 — Figma 반복 패턴을 React 선언적 API로 바꾸기',
+    date: '2026.04.11',
+    excerpt:
+      '같은 구조가 6번 반복되면, 그건 패턴이다. 어드민 폼의 시각적 반복 단위를 30줄짜리 선언적 컴포넌트로 추상화한 이야기.',
+  },
+  {
     slug: '20260410',
     title: '공공 API를 CLI로 감싸기 — kopis-cli 3일간의 빌드업',
     date: '2026.04.10',
