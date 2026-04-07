@@ -13,6 +13,13 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260412',
+    title: 'RSS와 REST API를 하나의 피드로 — React Native에서 이기종 콘텐츠를 통합한 이야기',
+    date: '2026.04.12',
+    excerpt:
+      '데이터 소스가 다르다는 건 사용자가 알 필요 없는 사실이다. 네 개의 이기종 소스를 하나의 타임라인으로 합치며 마주한 타입, 캐시, 페이지네이션 문제들.',
+  },
+  {
     slug: '20260411',
     title: '디자인 시안을 읽는 개발자 — Figma 반복 패턴을 React 선언적 API로 바꾸기',
     date: '2026.04.11',
