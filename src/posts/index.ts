@@ -13,6 +13,14 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260410',
+    title: '공공 API를 CLI로 감싸기 — kopis-cli 3일간의 빌드업',
+    date: '2026.04.10',
+    excerpt:
+      'KOPIS(공연예술통합전산망)는 한국 공연 정보의 거의 유일한 공공 데이터 소스다. 이걸 터미널에서 바로 쓸 수 있는 도구로 만들기로 했다.',
+    series: { id: 'kopis-cli', title: 'KOPIS(공연예술통합전산망)의 DX를 올려요', order: 1 },
+  },
+  {
     slug: '20260409',
     title: '실행되지 않는 조직은 어떻게 만들어지는가',
     date: '2026.04.09',
