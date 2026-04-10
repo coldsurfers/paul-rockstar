@@ -13,6 +13,13 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260413',
+    title: '토큰이란 무엇인가 — LLM이 텍스트를 읽는 단위',
+    date: '2026.04.13',
+    excerpt:
+      '토큰은 글자도, 단어도 아닌 LLM의 텍스트 처리 최소 단위다. BPE 알고리즘의 원리부터 영어·한국어 효율 차이, API 과금까지.',
+  },
+  {
     slug: '20260412',
     title: 'RSS와 REST API를 하나의 피드로 — React Native에서 이기종 콘텐츠를 통합한 이야기',
     date: '2026.04.12',
