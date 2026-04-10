@@ -13,6 +13,14 @@ export interface Post {
 
 const _posts: Post[] = [
   {
+    slug: '20260414',
+    title: 'CLI 위에 SDK를 얹다 — XML 응답을 TypeScript 표준으로 바꾸는 과정',
+    date: '2026.04.14',
+    excerpt:
+      'CLI는 사람을 위한 인터페이스다. SDK는 코드를 위한 인터페이스다. XML 파싱을 감추고 타입 안전한 클라이언트를 만든 과정.',
+    series: { id: 'kopis-cli', title: 'KOPIS(공연예술통합전산망)의 DX를 올려요', order: 2 },
+  },
+  {
     slug: '20260413',
     title: '토큰이란 무엇인가 — LLM이 텍스트를 읽는 단위',
     date: '2026.04.13',
